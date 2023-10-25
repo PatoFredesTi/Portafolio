@@ -1,21 +1,23 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import styles from './module/NavBar.module.css';
+import React from "react";
+import {Nav, Logo, LogoIMG, Menu, MenuItem} from "./Styled/Styled.NavBar";
+import logo from "../assets/images/logo.png"
 
-const NavBar: React.FC = () => {
-  return (
-    <nav className={styles.nav}>
-      <Link to="heroSection" smooth={true} duration={500} className={styles.logo}>Patricio Fredes</Link>
-      <ul className={styles.menu}>
-        <li><Link to="heroSection" smooth={true} duration={500} className={styles.menuItem}>Sobre mí</Link></li>
-        <li><Link to="skills" smooth={true} duration={500} className={styles.menuItem}>Skills</Link></li>
-        <li><Link to="jobExperience" smooth={true} duration={500} className={styles.menuItem}>Experiencia Laboral</Link></li>
-        <li><Link to="studies" smooth={true} duration={500} className={styles.menuItem}>Estudios</Link></li>
-        <li><Link to="projects" smooth={true} duration={500} className={styles.menuItem}>Proyectos</Link></li>
-        <li><Link to="contact" smooth={true} duration={500} className={styles.menuItem}>Contacto</Link></li>
-      </ul>
-    </nav>
-  );
-}
+const NavBar = () => {
+    return (
+        <Nav>
+            <Logo>
+                <LogoIMG src={logo} alt={logo} />
+            </Logo>
+            <Menu>
+                <MenuItem>Sobre Mi</MenuItem>
+                <MenuItem>Habilidades</MenuItem>
+                <MenuItem>Experiencia</MenuItem>
+                <MenuItem>Estudios</MenuItem>
+                <MenuItem>Proyectos</MenuItem>
+                <MenuItem>Contacto</MenuItem>
+            </Menu>
+        </Nav>
+    );
+};
 
 export default NavBar;
