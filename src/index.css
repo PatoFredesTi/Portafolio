@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  padding: 50px 0;
+}
+
+@keyframes blinkCursor{
+  from{
+    border-right-color: transparent;
+  }
+  to{
+    border-right-color: initial;
+  }
+}
+

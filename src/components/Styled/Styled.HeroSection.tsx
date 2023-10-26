@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin} from 'react-icons/fa'
+import { keyframes } from 'styled-components';
 
 export const Hero = styled.div`
     background-color: #171C28;
@@ -15,6 +16,10 @@ export const Titulo = styled.h1`
     font-size: 4rem;
     color: white;
     margin-bottom: 20px;
+`
+
+export const SubTitulo = styled.h4`
+    color: white;
 `
 
 export const Descripcion = styled.p`
@@ -48,6 +53,13 @@ export const Github = styled(FaGithub)`
 export const Linkedin = styled(FaLinkedin)`
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #fff;
+`;
+
+export const TyperWriterEffect = styled.div`
+    display: inline;
+    border-right: 2px solid;
+    animation: blinkCursor 0.9s infinite;
+    color: white;
 `;
 
 
