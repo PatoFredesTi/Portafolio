@@ -1,8 +1,10 @@
 import React from "react";
 import {Nav, Logo, LogoIMG, Menu, MenuItem} from "./Styled/Styled.NavBar";
 import logo from "../assets/images/logo.png"
+import ToggleButton from "./ButtonTheme";
 
 const NavBar = () => {
+    
     return (
         <Nav>
             <Logo>
@@ -15,6 +17,7 @@ const NavBar = () => {
                 <MenuItem>Estudios</MenuItem>
                 <MenuItem>Proyectos</MenuItem>
                 <MenuItem>Contacto</MenuItem>
+                <ToggleButton/>
             </Menu>
         </Nav>
     );
