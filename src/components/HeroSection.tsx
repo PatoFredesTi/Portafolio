@@ -8,9 +8,11 @@ import {
     Linkedin, 
     Icons, 
     SubTitulo,
-    TyperWriterEffect
+    TyperWriterEffect,
+    ProfilePic
 } from './Styled/Styled.HeroSection';
 import TypeWriter from '../hooks/TyperWriter';
+import ProfilePicture from "../assets/images/foto.jpg"
 
 const HeroSection = () => {
     const text ="Software Developer";
@@ -22,13 +24,16 @@ const HeroSection = () => {
             <TyperWriterEffect>
                 <SubTitulo>{typedText}</SubTitulo>
             </TyperWriterEffect>
+            <div>
+                <ProfilePic src={ProfilePicture} />
+            </div>
             <Descripcion>      
-                Soy Patricio Fredes, desarrollador de software apasionado por la innovación y la superación constante. 
+                Bienvenidos a mi Portafolio, soy Patricio Fredes, desarrollador de software apasionado por la innovación y la superación constante. 
                 Me especializo en crear soluciones eficientes y estoy siempre listo para enfrentar nuevos desafíos en proyectos emocionantes.
             </Descripcion>
             <Social>
-                <Icons><Github/></Icons>
-                <Icons><Linkedin/></Icons>
+                <Icons href='https://github.com/PatoFredesTi'><Github size={40}/></Icons>
+                <Icons href='https://www.linkedin.com/in/patriciofredesti/'><Linkedin size={40}/></Icons>
             </Social>
         </Hero>
     );
