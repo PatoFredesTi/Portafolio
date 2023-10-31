@@ -1,22 +1,46 @@
-import React from 'react';
+
 import styled from 'styled-components';
+import { ThemeStructure, themes } from '../../utils/themes';
+
+interface MenuProps {
+    open: boolean;
+    theme:ThemeStructure;
+}
 
 export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: ${({ theme }) => theme.backgroundColorNav};
-    opacity: 25;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 `;
 
-export const Menu = styled.ul`
+export const Menu = styled.ul<MenuProps>`
     list-style-type:none;
     display: flex;
-    gap: 1rem
+    gap: 1rem;
+    @media (max-width: 768px) {
+        display: none;
+
+        ${props => props.open && `
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            width: 50%;  
+            background-color: ${props.theme.backgroundColorNav};
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bot-20px;
+            border-color: red;
+        `}
+    }
 `;
 
 export const MenuItem = styled.a`
@@ -42,4 +66,13 @@ export const Logo = styled.a`
 export const LogoIMG = styled.img`
     width: 48px;
     cursor: pointer
+`;
+
+export const BurgerIcon = styled.div`
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: block; // Esto mostrará el ícono de hamburguesa en pantallas pequeñas
+    }
 `;
