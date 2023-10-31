@@ -9,7 +9,7 @@ const ToggleButton = () =>{
         <Switch>
             <Input
                 type="checkbox"
-                checked={theme === "dark"}
+                checked={theme === "light"}
                 onChange={toggleTheme} 
             />
             <Slider></Slider>            

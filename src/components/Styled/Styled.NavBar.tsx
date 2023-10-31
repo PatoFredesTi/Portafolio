@@ -5,7 +5,8 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #171C28;
+    background-color: ${({ theme }) => theme.backgroundColorNav};
+    opacity: 25;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -19,7 +20,7 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.a`
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
