@@ -6,6 +6,7 @@ import { ThemeProvider } from './hooks/ThemeContext';
 import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <NavBar/>
         <HeroSection/>
         <Skills/>
+        <Experience/>
     </ThemeProvider>
   );
 }
